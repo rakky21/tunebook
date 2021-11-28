@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS top5songs_db;
+
+CREATE DATABASE top5songs_db;
