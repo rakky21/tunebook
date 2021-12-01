@@ -1,35 +1,32 @@
 {{> post-info post}}
 
 {{#if loggedIn}}
-<form class="like-form">
-  <div>
-    <button type="submit" class="upvote-btn btn btn-primary btn-lg">Like</button>
-  </div>
-</form>
-{{/if}}
-
-{{#if loggedIn}}
 <form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
+  <div class="text-center">
+    <div>
+      <textarea name="comment-body"></textarea>
+    </div>
 
-  <div>
-    <button type="submit">add comment</button>
+    <div>
+      <button type="submit" class="btn btn-primary btn-lg">add comment</button>
+    </div>
   </div>
 </form>
 {{/if}}
 
 <div class="comments">
+  <h1 class="text-center text-primary">Comments</h1>
   {{#each post.comments}}
-  <section class="comment">
-    <div class="meta">
-      {{user.username}} on {{created_at}}
-    </div>
-    <div class="text">
-      {{comment_text}}
-    </div>
-  </section>
+  <div class="card col-4 col-mx-auto" id="comment-card">
+    <section class="comment">
+      <div class="meta text-primary">
+        {{user.username}} on {{created_at}}
+      </div>
+      <div class="text text-primary">
+        {{comment_text}}
+      </div>
+    </section>
+  </div>
   {{/each}}
 </div>
 

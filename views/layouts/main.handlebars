@@ -14,36 +14,38 @@
 <body>
   <div class="container hero bg-gray col-12 p-2">
     <div class="hero-body-sm p-2 col-12 bg-primary">
-    <header class="text-dark">
-      <nav >
+      <header class="text-dark">
+        <nav>
+          <h1 class="site-title">
+            <a href="/">Tunebook</a>
+          </h1>
           <a href="/">Home</a>
-        {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        {{!-- <button >logout</button> --}}
-    <button id="logout" class="float-right btn-no-style btn btn-primary btn-lg">Logout</button>
+          {{#if loggedIn}}
+          <a href="/dashboard">Dashboard</a>
+          {{!-- <button >logout</button> --}}
+          <button id="logout" class="float-right btn-no-style btn btn-primary btn-lg">Logout</button>
 
-        {{else}}
-        <a href="/login" class="float-right btn btn-primary btn-lg">login</a>
-        {{/if}}
-              </nav>
-        <h1>
-          <a href="/">Tunebook</a>
-        </h1>
-        </div>
+          {{else}}
+          <a href="/login" class="float-right btn btn-primary btn-lg">login</a>
+          {{/if}}
+        </nav>
+
+    </div>
     </header>
   </div>
 
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
+  <main>
+    {{{ body }}}
+  </main>
+  <footer>
+    Thanks for visiting!
+  </footer>
   </div>
 
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
+  <script src="https://kit.fontawesome.com/1093a90423.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
