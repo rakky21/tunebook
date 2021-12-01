@@ -1,9 +1,9 @@
-<article class="post">
-  <div class="title">
+<article class="post container">
+  <div class="title bg-secondary">
     <a href="{{post_url}}" target="_blank">{{title}}</a>
     <span>({{format_url post_url}})</span>
   </div>
-  <div class="meta">
-    {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
+  <div class="meta bg-gray">
+    {{vote_count}} {{format_plural "like" vote_count}} Posted by {{user.username}} on {{format_date created_at}}
   </div>
 </article>

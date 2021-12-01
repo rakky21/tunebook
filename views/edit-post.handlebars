@@ -1,9 +1,8 @@
 <article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
   <h2>
     Edit Post
   </h2>
-  <form class="edit-post-form">
+  <form class="edit-post-form bg-gray">
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
       <span>({{format_url post.post_url}})</span>
@@ -13,8 +12,8 @@
       |
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "like" post.comments.length}}</a>
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <button type="submit" class="btn btn-primary btn-lg">Save post</button>
+    <button type="button" class="delete-post-btn btn btn-primary btn-lg">Delete post</button>
   </form>
 </article>
 
