@@ -1,11 +1,25 @@
 <article class="post">
-  <div class="title">
-    <a href="{{post_url}}" target="_blank">{{title}}</a>
-    <span>({{format_url post_url}})</span>
+  <div class="card col-4 col-mx-auto" id="post-card">
+    <div class="card-header">
+      <a target="_blank">{{user.username}}</a>
+    </div>
+    <div class="card-body" id="title_song">
+      <a target="_blank">{{title}}</a>
+    </div>
+    <div class="card-body">
+      {{post_url}}
+    </div>
+    <div class="card-body columns text-center">
+      <div class="column col-6">
+        <button type="submit" class="upvote-btn btn btn-primary btn-md"><i class="fas fa-play">
+            {{vote_count}}</i></button>
+      </div>
+      <div class="column col-6">
+        <a href="/post/{{id}}"><i class="far fa-comments"> {{comments.length}}</i></a>
+      </div>
+    </div>
   </div>
-  <div class="meta">
-    {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}}
-    on {{format_date created_at}}
-  </div>
-  <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
 </article>
+{{#if loggedIn}}
+<script src="/javascript/upvote.js"></script>
+{{/if}}

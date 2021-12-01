@@ -33,6 +33,31 @@
    border-radius: 5px;
  }
 
+ .site-title {
+   font-size: 50px;
+ }
+
+
+ #post-card {
+   width: 600px;
+   height: 200px;
+   border: 1px solid #fff;
+   background: url(img/tiger.png) no-repeat;
+   box-shadow: 10px 10px 5px #ccc;
+   -moz-box-shadow: 10px 10px 5px #ccc;
+   -webkit-box-shadow: 10px 10px 5px #ccc;
+   -khtml-box-shadow: 10px 10px 5px #ccc;
+ }
+
+ #comment-card {
+   border: 1px solid #000;
+   background: url(img/tiger.png) no-repeat;
+   box-shadow: 10px 10px 5px #ccc;
+   -moz-box-shadow: 10px 10px 5px #ccc;
+   -webkit-box-shadow: 10px 10px 5px #ccc;
+   -khtml-box-shadow: 10px 10px 5px #ccc;
+ }
+
  button:hover {
    background-color: #3486eb;
  }
@@ -125,6 +150,10 @@
    line-height: 150%;
  }
 
+ #title_song {
+   font-size: 20px;
+ }
+
  .post .title span {
    font-style: italic;
    font-size: 90%;
@@ -154,9 +183,6 @@
    margin-bottom: 1%;
  }
 
- .comment:nth-child(odd) {
-   background-color: #fff5eb;
- }
 
  .comment .meta {
    font-size: 90%;
