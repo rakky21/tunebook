@@ -1,9 +1,14 @@
 async function upvoteClickHandler(event) {
   event.preventDefault();
 
-  const id = window.location.toString().split('/')[
+  let id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
+
+  if(!id){
+    id = this.getAttribute("data-id");
+    console.log(id);
+  }
   const response = await fetch('/api/posts/upvote', {
     method: 'PUT',
     body: JSON.stringify({
@@ -22,4 +27,6 @@ async function upvoteClickHandler(event) {
   }
 }
 
-document.querySelector('.upvote-btn').addEventListener('click', upvoteClickHandler);
+const buttons = document.querySelectorAll('.upvote-btn');
+
+buttons.forEach(button => button.addEventListener('click', upvoteClickHandler))

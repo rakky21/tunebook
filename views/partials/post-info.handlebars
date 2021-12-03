@@ -11,7 +11,7 @@
     </div>
     <div class="card-body columns text-center">
       <div class="column col-6">
-        <button type="submit" class="upvote-btn btn btn-primary btn-md"><i class="fas fa-play">
+        <button type="submit" class="upvote-btn btn btn-primary btn-md" data-id="{{id}}"><i class="fas fa-play">
             {{vote_count}}</i></button>
       </div>
       <div class="column col-6">
@@ -20,6 +20,3 @@
     </div>
   </div>
 </article>
-{{#if loggedIn}}
-<script src="/javascript/upvote.js"></script>
-{{/if}}
